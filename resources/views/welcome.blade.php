@@ -57,7 +57,9 @@
                                 <div class="form-group">
                                     <label>Select users to notify</label>
                                     <select name="users[]" multiple class="form-control">
-
+                                        @foreach ($users as $user)
+                                            <option value="{{ $user->id }}">{{ $user->phone_number }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
 
